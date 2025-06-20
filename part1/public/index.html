@@ -13,13 +13,12 @@
         <br>
         <h1>45</h1>
         <div v-if="secondButton">Click on button below again to open</div>
-        <form @submit.prevent="openPage">
+        <br>
             <input
                 type="text"
                 v-model="enNum"
                 placeholder="Enter number you have seen"
                 required>
-        </form>
         <button v-if="secondButton" type="button" @click="openPage">Open again</button>
     </div>
     <div v-if="isOpen">
