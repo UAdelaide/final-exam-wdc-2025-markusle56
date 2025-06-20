@@ -90,8 +90,40 @@
           error,
           applyToWalk
         };
+      },data() {
+        return {
+          user: null,
+        }
+      },
+      async mounted() {
+        const response = await fetch('/api/users/me');
+        const data = await response.json();
+        if (data.error) {
+          console.error(data.error);
+          window.location.href = '/';
+          return;
+        }
+        if (data.role === 'walker') {
+          window.location.href = '/walker-dashboard.html'
+          return;
+        }
+        this.user = data;
+      },
+      methods: {
+        async logout() {
+          try {
+            const res = await fetch('/api/users/logout');
+            if (!res.ok) {
+              throw new Error('Logout failed');
+            }
+            sessionStorage.clear();
+            window.location.href = '/';
+          } catch(err) {
+            console.error('Logout error', err);
+          }
+        }
       }
-}).mount('#app');
+    }).mount('#app');
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
