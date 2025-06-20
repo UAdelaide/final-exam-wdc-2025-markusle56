@@ -56,31 +56,20 @@ CREATE TABLE WalkRatings (
 
 
 INSERT INTO Users (username, email, password_hash, role) 
-
 VALUES
-
 ('alice123', 'alice@example.com', 'hashed123','owner'),
-
 ('bobwalker', 'bob@example.com', 'hashed456','walker'),
-
 ('carol123', 'carol@example.com', 'hashed789','owner');
 
 
 
 INSERT INTO Dogs (owner_id, name, size)
-
 VALUES
-
 ((SElECT user_id FROM Users WHERE email = 'alice@example.com' LIMIT 1),'Max', 'medium'),
-
 ((SElECT user_id FROM Users WHERE email = 'carol@example.com' LIMIT 1), 'Bella', 'small'),
-
 ((SElECT user_id FROM Users WHERE email = 'alice@example.com' LIMIT 1), 'Den', 'large'),
-
 ((SElECT user_id FROM Users WHERE email = 'carol@example.com' LIMIT 1), 'PhuLoc', 'medium'),
-
 ((SElECT user_id FROM Users WHERE email = 'alice@example.com' LIMIT 1), 'LuongPhuoc', 'small');
-
 
 
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
