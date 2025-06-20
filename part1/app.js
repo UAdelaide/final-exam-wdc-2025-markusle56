@@ -27,7 +27,7 @@ let db;
     // Connect to MySQL without specifying a database
     const connection = await mysql.createConnection({
       // host: 'localhost',
-      
+      socketPath: '/var/run/mysqld/mysqld.sock',
       user: 'root',
       password: 'root' // Set your MySQL root password
     });
@@ -38,7 +38,8 @@ let db;
 
     // Now connect to the created database
     db = await mysql.createConnection({
-      host: 'localhost',
+      // host: 'localhost',
+      socketPath: '/var/run/mysqld/mysqld.sock',
       user: 'root',
       password: 'root',
       database: 'DogWalkService'
