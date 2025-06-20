@@ -70,7 +70,7 @@ router.get('/api/walkers/summary', async function(req, res) {
     );
     return res.status(200).json(rows);
   } catch(err) {
-    console.error("Error geting request walk data");
+    console.error("Error geting walkers data");
     return res.sendStatus(500);
   }
 });
