@@ -149,7 +149,9 @@
 
         const res = await fetch('/api/walks/dogs');
         const dog_data = await res.json();
-        if (res)
+        if (res.ok) {
+          this.dogs = 
+        }
       },
       methods: {
         async logout() {
