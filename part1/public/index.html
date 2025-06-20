@@ -8,9 +8,9 @@
 </head>
 <body id="app">
     <div v-if="!isOpen">
-        <div v-if="firstButton">Click on button to open</div>
+        <div v-if="firstButton">Click on button below to open</div>
         <button v-if="firstButton" type="button"@click="open2rdButton">Open</button>
-        <div v-if="secondButton">Click on red button again to open</div>
+        <div v-if="secondButton">Click on button below again to open</div>
         <button v-if="secondButton" type="button" @click="openPage">Open again</button>
     </div>
     <div v-if="isOpen">
