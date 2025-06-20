@@ -40,7 +40,7 @@ let db;
       host: 'localhost',
       user: 'root',
       password: 'root',
-      database: 'testdb'
+      database: 'DogWalkService'
     });
 
     // Create a table if it doesn't exist
