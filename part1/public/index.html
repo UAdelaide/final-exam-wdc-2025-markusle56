@@ -9,10 +9,10 @@
 </head>
 <body>
     <div class="overlay">
-        <div>Click on red button to open</div>
+        <div v-if="firstButton">Click on red button to open</div>
         <button type="button" class="button" @click="open2Button">Open</button>
-        <div>Click on red button again to open</div>
-        <button type="button" class="button" @click="openPage">Open</button>
+        <div v-if="">Click on red button again to open</div>
+        <button type="button" class="button" @click="openPage">Open again</button>
     </div>
     <h1>Dog of the Day</h1>
 
