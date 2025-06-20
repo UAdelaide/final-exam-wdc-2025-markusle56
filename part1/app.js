@@ -75,12 +75,13 @@ let db;
     `);
 
     await db.execute(`
-  INSERT INTO Users (username, email, password_hash, role)
-  VALUES
-    ('noratingwalker', 'no@ratings.com', 'pw1', 'walker'),
-    ('nowalkswalker',  'no@walks.com',   'pw2', 'walker')
-`);
+      INSERT INTO Users (username, email, password_hash, role)
+      VALUES
+        ('noratingwalker', 'no@ratings.com', 'pw1', 'walker'),
+        ('nowalkswalker',  'no@walks.com',   'pw2', 'walker')
+    `);
 
+    
 
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
