@@ -85,6 +85,8 @@
 
           if (imageData.status === 'success') {
             dog.image = imageData.message;
+          } else {
+            console.log("cannot load iamge")
           }
         }
         this.dogs = dogs;
