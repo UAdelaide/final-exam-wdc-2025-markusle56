@@ -8,6 +8,7 @@
 </head>
 <body id="app">
     <div v-if="!isOpen">
+        <br>
         <div>
             <div v-if="firstButton">Click on button below to open</div>
             <button v-if="firstButton" type="button"@click="open2rdButton">Open</button>
@@ -17,11 +18,12 @@
         <div v-if="secondButton">
             <div>Click on button below again to open</div>
             <br>
-                <input
-                    type="text"
-                    v-model="enNum"
-                    placeholder="Enter number you have seen"
-                    required>
+            <input
+                type="text"
+                v-model="enNum"
+                placeholder="Enter number you have seen"
+                required>
+            <br>
             <button type="button" @click="openPage">Open again</button>
         </div>
 
