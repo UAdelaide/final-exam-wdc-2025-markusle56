@@ -153,7 +153,7 @@
 
         const res = await fetch('/api/walks/dogs')
         if (res.ok) {
-          this.dogs = res.json();
+          this.dogs = await res.json();
         }
       },
       methods: {
