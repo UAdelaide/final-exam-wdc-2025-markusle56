@@ -37,10 +37,8 @@ app.get('/api/dogs', async function(req, res) {
         d.dog_id
         d.name AS dog_name,
         d.size,
-        d.user_id
-      FROM Dogs d
-      JOIN Users u
-        ON d.owner_id = u.user_id`
+        d.owner_id
+      FROM Dogs d`
     );
     return res.status(200).json(rows);
   } catch(err) {
