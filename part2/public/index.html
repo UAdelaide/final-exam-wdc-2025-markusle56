@@ -74,17 +74,17 @@
 
         const res = await fetch('/api/dogs');
         const dogs = await res.json();
-        if (!dogs) {
-          return;
-        }
-        dogs.foreach(dog) => {
-          const imageFile = await fetch('https://dog.ceo/api/breeds/image/random');
-          if (!imageFile.message) {
-            return;
+
+        if (!dogs) return;
+
+        for (const dog of dogs) {
+          const imageRes = await fetch('https://dog.ceo/api/breeds/image/random');
+          const imageData = await imageRes.json();
+
+          if (imageData.status === 'success') {
+            dog.image = imageData.message;
           }
-          dog.image = imageFile.message;
         }
-      },
       methods: {
         async login() {
           this.errorMessage = '';
