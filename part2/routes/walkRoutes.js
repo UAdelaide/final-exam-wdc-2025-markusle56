@@ -59,7 +59,7 @@ router.post('/:id/apply', async (req, res) => {
   }
 });
 
-// fetch user dogs
+// fetch 
 router.get('/dogs', async (req, res) => {
   try {
     if (!req.session.user) {
