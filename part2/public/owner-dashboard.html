@@ -150,7 +150,6 @@
         async logout() {
           try {
             const res = await fetch('/api/users/logout');
-            const data = await res.json()
             if (!res.ok) {
               throw new Error('Logout failed');
             }
