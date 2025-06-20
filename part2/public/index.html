@@ -51,8 +51,9 @@
                 username: this.username,
                 password: this.password
               })
-            })
-            
+            });
+
+            const data = await res.json
             .then((res) => {
               if (!res.ok) {
                 return res.json.then((msg) => {
