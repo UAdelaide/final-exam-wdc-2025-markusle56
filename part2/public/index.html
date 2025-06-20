@@ -48,9 +48,9 @@
               })
             })
             .then((res) => {
-              return response.text().then((msg) => {
-                  throw new Error(msg);
-              });
+              if (!response.ok) {
+                  
+                }
             })
           }
         }
