@@ -56,7 +56,9 @@
               return res.json();
             })
             .then((data) => {
-              if (data.role == 'owner') {}
+              if (data.role == 'owner') {
+                window.location.href = '/owner-dashboard.htnk'
+              }
             })
           }
         }
