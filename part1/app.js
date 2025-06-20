@@ -26,7 +26,8 @@ let db;
   try {
     // Connect to MySQL without specifying a database
     const connection = await mysql.createConnection({
-      host: 'localhost',
+      // host: 'localhost',
+      
       user: 'root',
       password: 'root' // Set your MySQL root password
     });
