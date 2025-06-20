@@ -17,7 +17,7 @@ createApp({
             this.imagePath = dogFile.message;
         }
     } catch (err) {
-
+        console.err(err.message);
     }
   },
   methods: {
