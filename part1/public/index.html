@@ -16,8 +16,8 @@
         <form @submit.prevent="openPage">
             <input
                 type="text"
-                v-model="input"
-                placeholder="Enter number I have seen"
+                v-model="enNum"
+                placeholder="Enter number you have seen"
                 required>
         </form>
         <button v-if="secondButton" type="button" @click="openPage">Open again</button>
