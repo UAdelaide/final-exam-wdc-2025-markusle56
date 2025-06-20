@@ -79,7 +79,10 @@
         }
         dogs.foreach(dog) => {
           const imageFile = await fetch('https://dog.ceo/api/breeds/image/random');
-          if (imageFile.message)
+          if (!imageFile.message) {
+            return;
+          }
+          
         }
       },
       methods: {
