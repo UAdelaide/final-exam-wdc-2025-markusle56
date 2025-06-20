@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/api/dogs', async function(req, res) {
   try {
-    const [rows] = await db
+    const [rows] = await db.qu
   } catch(err) {
     console.error("Error geting dogs data")
   }
