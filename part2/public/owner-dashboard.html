@@ -136,7 +136,7 @@
           user: null,
         }
       },
-      mounted() {
+      amounted() {
         const response = await fetch('/api/users/me');
         const data = await response.json();
         if (data.error) {
