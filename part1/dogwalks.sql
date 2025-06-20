@@ -66,4 +66,4 @@ VALUES
 
 INSERT INTO Dogs (owner_id, name, size)
 VALUES
-()
+(SElECT user_id FROM Users WHER )
