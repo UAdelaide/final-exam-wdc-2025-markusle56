@@ -80,7 +80,14 @@ let db;
         ('noratingwalker', 'no@ratings.com', 'pw1', 'walker'),
         ('nowalkswalker', 'no@walks.com', 'pw2', 'walker')
     `);
-    
+
+    await db.execute(`
+      INSERT INTO WalkApplications (request_id, walker_id, status)
+      VALUES
+        (1, 2, 'completed'),
+        (4, 2, 'completed'),
+        (3, 5, 'completed')
+    `);
 
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
