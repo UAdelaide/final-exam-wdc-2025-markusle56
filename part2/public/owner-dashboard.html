@@ -142,7 +142,8 @@
             const res = fetch('/api/users/logout');
             const data = res.json()
             if (!res.ok) {
-              this.errorMessage =
+              this.errorMessage = data.error;
+              throw error
             }
           }
         }
