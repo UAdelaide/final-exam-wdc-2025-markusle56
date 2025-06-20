@@ -40,6 +40,16 @@
           errorMessage: ''
         };
       },
+      async mounted() {
+        const response = await fetch('/api/users/me');
+        const data = await response.json();
+        if (data.error) {
+          console.error(data.error);
+          window.location.href = '/';
+          return;
+        }
+        this.user = data;
+      },
       methods: {
         async login() {
           this.errorMessage = '';
