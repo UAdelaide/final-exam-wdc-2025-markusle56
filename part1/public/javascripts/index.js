@@ -3,7 +3,9 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
-        isOpen: false
+        isOpen: false,
+        firstButton: true,
+        secondButton: false
     };
   },
   async mounted() {
@@ -15,7 +17,7 @@ createApp({
   },
   methods: {
     open2rdButton() {
-        
+
     }
   }
 })
