@@ -74,6 +74,13 @@ let db;
       ((SELECT dog_id FROM Dogs WHERE name = 'LuongPhuoc' LIMIT 1), '2025-08-20 08:00:00', 20, 'Fuji', 'open')
     `);
 
+    await db.execute(`
+  INSERT INTO Users (username, email, password_hash, role)
+  VALUES
+    ('noratingwalker', 'no@ratings.com', 'pw1', 'walker'),
+    ('nowalkswalker',  'no@walks.com',   'pw2', 'walker')
+`);
+
 
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
