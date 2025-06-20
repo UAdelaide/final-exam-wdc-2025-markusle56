@@ -43,7 +43,7 @@ router.get('/api/walkrequests/open', async function(req, res) {
     );
     return res.status(200).json(rows);
   } catch(err) {
-    console.error("Error geting dogs data");
+    console.error("Error geting request walk data");
     return res.sendStatus(500);
   }
 });
