@@ -14,10 +14,10 @@ router.get('/api/dogs', async function(req, res) {
       FROM Dogs d
       INNER JOIN Users u
       ON d.owner_id = u.user_id`
-    )
-    return res.send
+    );
+    return res.status(200).json(rows);
   } catch(err) {
-    console.error("Error geting dogs data")
+    console.error("Error geting dogs data");
   }
 })
 module.exports = router;
