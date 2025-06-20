@@ -152,7 +152,7 @@
             const res = await fetch('/api/users/logout');
             const data = await res.json()
             if (!res.ok) {
-              throw new Error(data.error || 'Logout failed');
+              throw new Error('Logout failed');
             }
             sessionStorage.clear();
             window.location.href = '/';
