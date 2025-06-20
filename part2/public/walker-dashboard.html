@@ -83,11 +83,12 @@
           try {
             const response = await fetch('/api/users/me');
             const data = await response.json();
-        if (data.error || data.role != 'walker') {
-          console.error(data.error);
-          window.location.href = '/';
-          return;
-        }
+            if (data.error || data.role != 'walker') {
+              console.error(data.error);
+              window.location.href = '/';
+              return;
+            }
+            return user;
           }
         }
 
