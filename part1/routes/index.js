@@ -35,7 +35,30 @@ router.get('/api/walkrequests/open', async function(req, res) {
         r.duration_minutes,
         r.location,
         u.username AS owner_username
-      FROM WalkRequests
+      FROM WalkRequests r
+      JOIN Dogs d
+        ON r.dog_id = d.dog_id
+      JOIN Users u
+        ON d.owner_id = u.user_id`
+    );
+    return res.status(200).json(rows);
+  } catch(err) {
+    console.error("Error geting request walk data");
+    return res.sendStatus(500);
+  }
+});
+
+router.get('/api/walkrequests/open', async function(req, res) {
+  try {
+    const [rows] = await db.query(
+      `SELECT
+        r.request_id,
+        d.name AS dog_name,
+        r.requested_time,
+        r.duration_minutes,
+        r.location,
+        u.username AS owner_username
+      FROM WalkRequests r
       JOIN Dogs d
         ON r.dog_id = d.dog_id
       JOIN Users u
