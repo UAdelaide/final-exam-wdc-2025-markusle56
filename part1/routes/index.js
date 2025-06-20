@@ -48,7 +48,7 @@ router.get('/api/walkrequests/open', async function(req, res) {
   }
 });
 
-router.get('/api/walkrequests/open', async function(req, res) {
+router.get('/api/walkers/summary', async function(req, res) {
   try {
     const [rows] = await db.query(
       `SELECT
