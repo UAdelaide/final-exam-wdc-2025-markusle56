@@ -58,8 +58,8 @@ router.get('/api/walkers/summary', async function(req, res) {
         AVG(ra.rating) AS average_rating,
         (
           SELECT
-          COUNT(ra.request_id)
-          FROM WalkRequesta re
+          COUNT(*)
+          FROM WalkRequests re
           WHERE ra.request_id = re.request_id
             AND re.status = 'completed'
         ) AS completed_walks
