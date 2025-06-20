@@ -140,12 +140,8 @@
         const response = await fetch('/api/users/me');
         const data = await response.json();
         if (data.error) {
-          console.error(data.error);
+          console.error(data.error || data);
           window.location.href = '/';
-          return;
-        }
-        if (data.role === 'walker') {
-          window.location.href = '/walker-dashboard.html'
           return;
         }
         this.user = data;
