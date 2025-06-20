@@ -7,11 +7,11 @@ createApp({
     };
   },
   async mounted() {
-    try {
+    // try {
 
-    } catch (err) {
+    // } catch (err) {
 
-    }
+    // }
   },
   methods: {
   }
