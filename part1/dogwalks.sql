@@ -78,4 +78,4 @@ VALUES
 ((SELECT dog_id FROM Dogs WHERE name = 'Bella' LIMIT 1), '2025-06-10 09:30:00', '45', 'Beachside Ave', 'accepted'),
 ((SELECT dog_id FROM Dogs WHERE name = 'Balle' LIMIT 1), '2025-07-12 08:00:00', '45', 'Moon', 'cancelled'),
 ((SELECT dog_id FROM Dogs WHERE name = 'PhuLoc' LIMIT 1), '2025-04-14 08:00:00', '100', 'Renown Park', 'completed'),
-((SELECT dog_id FROM Dogs WHERE name = 'LuongPhuoc' LIMIT 1), '2025-08-20 08:00:00', '20', 'Fuji', 'open'),
+((SELECT dog_id FROM Dogs WHERE name = 'LuongPhuoc' LIMIT 1), '2025-08-20 08:00:00', '20', 'Fuji', 'open');
