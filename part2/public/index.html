@@ -53,8 +53,10 @@
                   throw new Error(msg.error);
                 })
               }
+              return res.json();
             })
-            .then(())
+            .then((data) =>
+            )
           }
         }
       }
