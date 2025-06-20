@@ -113,13 +113,7 @@
         }
       },
       async mounted() {
-        const response = await fetch('/api/users/me');
-        const data = await response.json();
-        if (data.error || data.role != 'walker') {
-          console.error(data.error);
-          window.location.href = '/';
-          return;
-        }
+        this.user = this.getCurrentUser()
         this.user = data;
       },
       methods: {
