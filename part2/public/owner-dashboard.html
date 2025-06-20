@@ -141,7 +141,8 @@
         const data = res.json();
         if (data.error) {
           console.error(data.error);
-          return
+          window.location.href = '/';
+          
         }
       },
       methods: {
