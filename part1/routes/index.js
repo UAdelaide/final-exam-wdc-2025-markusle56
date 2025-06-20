@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 router.get('/api/dogs', async function(req, res) {
   try {
     const [rows] = await db.query(
-      `SELECT d.dog AS dog_name, d.size, u.user`
+      `SELECT d.dog AS dog_name, d.size, u.username AS owner_username`
     )
   } catch(err) {
     console.error("Error geting dogs data")
