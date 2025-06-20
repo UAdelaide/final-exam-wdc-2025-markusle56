@@ -142,8 +142,11 @@
             const res = fetch('/api/users/logout');
             const data = res.json()
             if (!res.ok) {
-              throw new Error(data.error || 'Logout failed')
+              throw new Error(data.error || 'Logout failed');
             }
+          } catch(err) {
+            this.errorMessage = err.message;
+            console.error('Login error', err);
           }
         }
       }
