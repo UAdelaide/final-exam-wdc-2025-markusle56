@@ -31,7 +31,9 @@
     createApp({
       data() {
         return {
-          message: 'Welcome to the Dog Walking Service!'
+          message: 'Welcome to the Dog Walking Service!',
+          username: '',
+          password: ''
         };
       },
       methods: {
@@ -41,8 +43,7 @@
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({
-                book_id: this.selectedBook.book_id,
-                message: this.message
+                user
         })
             })
           }
