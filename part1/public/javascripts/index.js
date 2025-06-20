@@ -21,7 +21,8 @@ createApp({
         this.secondButton = true;
     },
     openPage() {
-        this.secondButton
+        this.secondButton = false;
+        this.isOpen = true;
     }
   }
 })
