@@ -148,7 +148,8 @@
         this.user = data;
 
         const res = await fetch('/api/walks/dogs');
-        const dog_data = await 
+        const dog_data = await res.json();
+        if (dog_data)
       },
       methods: {
         async logout() {
