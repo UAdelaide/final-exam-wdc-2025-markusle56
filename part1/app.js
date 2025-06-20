@@ -84,7 +84,7 @@ let db;
     await db.execute(`
       INSERT INTO WalkApplications (request_id, walker_id, status)
       VALUES
-        (1, 2, 'accepted'),
+        (3, 5, 'accepted'),
         (4, 2, 'accepted'),
         (3, 5, 'pending')
     `);
