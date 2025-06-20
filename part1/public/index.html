@@ -8,13 +8,13 @@
 </head>
 <body id="app">
     <div v-if="!isOpen">
-        <div v-if="firstButton">Click on button below to open</div>
-        <button v-if="firstButton" type="button"@click="open2rdButton">Open</button>
-        <br>
-        <h1>45</h1>
-
-        <div>
-            <div v-if="secondButton">Click on button below again to open</div>
+        <div></div>
+            <div v-if="firstButton">Click on button below to open</div>
+            <button v-if="firstButton" type="button"@click="open2rdButton">Open</button>
+            <br>
+            <h1>45</h1>
+        <div v-if="secondButton">
+            <div>Click on button below again to open</div>
             <br>
                 <input
                     type="text"
