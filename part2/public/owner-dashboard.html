@@ -136,7 +136,7 @@
           user: null,
         }
       },
-      amounted() {
+      asynce mounted() {
         const response = await fetch('/api/users/me');
         const data = await response.json();
         if (data.error) {
@@ -149,8 +149,8 @@
       methods: {
         logout() {
           try {
-            const res = fetch('/api/users/logout');
-            const data = res.json()
+            const res = await fetch('/api/users/logout');
+            const data = await res.json()
             if (!res.ok) {
               throw new Error(data.error || 'Logout failed');
             }
