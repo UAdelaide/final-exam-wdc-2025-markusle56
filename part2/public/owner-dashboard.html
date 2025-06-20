@@ -139,9 +139,10 @@
       mounted() {
         const res = fetch('/api/users/me');
         const data = res.json();
-        if (data.dat) {
+        if (data.error) {
           console.error(data.error);
           window.location.href = '/';
+          return
         }
 
       },
