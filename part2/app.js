@@ -34,11 +34,11 @@ app.get('/api/dogs', async function(req, res) {
   try {
     const [rows] = await db.query(
       `SELECT
-        d.dog_id
-        d.name AS dog_name,
-        d.size,
-        d.owner_id
-      FROM Dogs d`
+        dog_id
+        name AS dog_name,
+        size,
+        owner_id
+      FROM Dogs`
     );
     return res.status(200).json(rows);
   } catch(err) {
