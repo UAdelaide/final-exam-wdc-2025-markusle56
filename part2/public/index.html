@@ -54,7 +54,7 @@
 
             const data = await res.json()
 
-            if (!res.ok) {
+            if (!res.ok) {this.errorMessage = err.message;
               throw new Error(data.error || 'Login failed');
             }
 
