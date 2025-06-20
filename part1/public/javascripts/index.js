@@ -14,6 +14,9 @@ createApp({
     // }
   },
   methods: {
+    open2rdButton() {
+        
+    }
   }
 })
 .mount('#app');
