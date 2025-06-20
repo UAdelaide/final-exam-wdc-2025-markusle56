@@ -16,6 +16,8 @@
         <form @submit.prevent="openPage">
             <input
                 type="text"
+                v-model="input"
+                
                 required>
         </form>
         <button v-if="secondButton" type="button" @click="openPage">Open again</button>
