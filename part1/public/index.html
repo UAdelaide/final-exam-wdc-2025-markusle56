@@ -62,8 +62,12 @@
                 this.secondButton = true;
             },
             openPage() {
-                this.secondButton = false;
-                this.isOpen = true;
+                if(this.enNum === 45) {
+                    this.secondButton = false;
+                    this.isOpen = true;
+                    enNum
+                }
+
             }
         }
         })
