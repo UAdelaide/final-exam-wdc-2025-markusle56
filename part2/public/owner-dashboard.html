@@ -145,7 +145,7 @@
             if (!res.ok) {
               throw new Error(data.error || 'Logout failed');
             }
-            
+            window.location.href = '/';
           } catch(err) {
             this.errorMessage = err.message;
             console.error('Login error', err);
