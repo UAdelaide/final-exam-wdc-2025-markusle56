@@ -137,8 +137,8 @@
         }
       },
       mounted() {
-        const response = fetch('/api/users/me');
-        const data = response.json();
+        const response = await fetch('/api/users/me');
+        const data = await response.json();
         if (data.error) {
           console.error(data.error);
           window.location.href = '/';
