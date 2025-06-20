@@ -20,7 +20,7 @@ router.get('/api/dogs', async function(req, res) {
     );
     return res.status(200).json(rows);
   } catch(err) {
-    console.error("Error geting dogs data");
+    console.error("Error getting dogs data");
     return res.sendStatus(500);
   }
 });
@@ -44,7 +44,7 @@ router.get('/api/walkrequests/open', async function(req, res) {
     );
     return res.status(200).json(rows);
   } catch(err) {
-    console.error("Error geting request walk data");
+    console.error("Error getting walk request data");
     return res.sendStatus(500);
   }
 });
@@ -71,7 +71,7 @@ router.get('/api/walkers/summary', async function(req, res) {
     );
     return res.status(200).json(rows);
   } catch(err) {
-    console.error("Error geting walkers data");
+    console.error("Error getting walkers data");
     return res.sendStatus(500);
   }
 });
