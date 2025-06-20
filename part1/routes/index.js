@@ -13,8 +13,9 @@ router.get('/api/dogs', async function(req, res) {
       `SELECT d.dog AS dog_name, d.size, u.username AS owner_username
       FROM Dogs d
       INNER JOIN Users u
-      ON d.`
+      ON d.owner_id = u.user_id`
     )
+    return res.send
   } catch(err) {
     console.error("Error geting dogs data")
   }
