@@ -42,7 +42,7 @@
                 firstButton: true,
                 secondButton: false,
                 imagePath: '',
-                enNum
+                enNum: null
             };
         },
         async mounted() {
@@ -65,7 +65,7 @@
                 if(this.enNum === 45) {
                     this.secondButton = false;
                     this.isOpen = true;
-                    enNum
+                    this.enNum = null;
                 }
 
             }
