@@ -64,7 +64,7 @@ router.post('/login', async (req, res) => {
 });
 
 
-//GET log out
+// GET log out
 router.get('/logout', (req, res) => {
   req.session.destroy((error) => {
     if (error) {
@@ -74,4 +74,5 @@ router.get('/logout', (req, res) => {
     return res.status(200).clearCookie('connect.sid', { path: '/' });
   });
 });
+
 module.exports = router;
