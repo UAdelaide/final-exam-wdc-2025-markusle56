@@ -138,7 +138,8 @@
       },
       mounted() {
         const res = fetch('/api/users/me');
-        const 
+        const data = res.json();
+        if (data.user)
       },
       methods: {
         logout() {
