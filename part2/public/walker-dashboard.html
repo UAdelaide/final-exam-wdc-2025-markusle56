@@ -62,7 +62,7 @@
 
         async function applyToWalk(requestId) {
           try {
-            const user = await get
+            const user = await getCurrentUser();
             const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
@@ -90,6 +90,9 @@
               return;
             }
             return user;
+          } catch (err) {
+            error.value = err.message;
+            message.value = '';
           }
         }
 
