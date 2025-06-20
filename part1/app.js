@@ -78,9 +78,8 @@ let db;
       INSERT INTO Users (username, email, password_hash, role)
       VALUES
         ('noratingwalker', 'no@ratings.com', 'pw1', 'walker'),
-        ('nowalkswalker',  'no@walks.com',   'pw2', 'walker')
+        ('nowalkswalker', 'no@walks.com', 'pw2', 'walker')
     `);
-
     
 
   } catch (err) {
