@@ -11,7 +11,7 @@ createApp({
   },
   async mounted() {
     try {
-        
+        const res = fetch('')
     } catch (err) {
 
     }
