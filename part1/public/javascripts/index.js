@@ -14,7 +14,7 @@ createApp({
         const res = await fetch('https://dog.ceo/api/breeds/image/random');
         const dogFile = await res.json();
         if (dogFile.status === "success") {
-            this.
+            this.imagePath = dogFile.message;
         }
     } catch (err) {
 
