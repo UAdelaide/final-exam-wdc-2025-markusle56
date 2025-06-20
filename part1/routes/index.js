@@ -9,6 +9,8 @@ router.get('/', function(req, res, next) {
 router.get('/api/dogs', async function(req, res) {
   try {
 
+  } catch(err) {
+    
   }
 })
 module.exports = router;
