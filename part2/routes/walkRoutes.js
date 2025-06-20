@@ -59,5 +59,7 @@ router.post('/:id/apply', async (req, res) => {
   }
 });
 
-router.get('user')
+router.get('/dogs', async (req, res) => {
+  
+})
 module.exports = router;
