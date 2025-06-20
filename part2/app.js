@@ -30,6 +30,7 @@ const userRoutes = require('./routes/userRoutes');
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
+// GET all dog data
 app.get('/api/dogs', async function(req, res) {
   try {
     const [rows] = await db.query(
