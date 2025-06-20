@@ -10,7 +10,7 @@ router.get('/api/dogs', async function(req, res) {
   try {
 
   } catch(err) {
-    
+    console.log("")
   }
 })
 module.exports = router;
