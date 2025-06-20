@@ -6,6 +6,17 @@ var session = require('express-session');
 
 const app = express();
 
+app.use(session({
+  secret: 'Exam',
+  resave: false ,
+  saveUninitialized: true,
+  cookie: {
+    secure: false,
+    maxAge: 1000 * 60 * 60 * 2
+  }
+}));
+
+
 // Middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
