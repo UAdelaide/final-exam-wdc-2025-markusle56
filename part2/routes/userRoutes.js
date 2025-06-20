@@ -71,7 +71,7 @@ router.get('/logout', (req, res) => {
       console.error('Session destroy error:', error);
       return res.sendStatus(500);
     }
-    res.clearCookie('connect.sid', { path: '/' });
-    });
+    return res.clearCookie('connect.sid', { path: '/' });
+  });
 });
 module.exports = router;
