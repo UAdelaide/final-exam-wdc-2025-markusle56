@@ -24,9 +24,9 @@
         <form @submit.prevent="submitWalkRequest">
           <div class="mb-3">
             <label class="form-label">Dog ID</label>
-            <select class="form-select" aria-label="Default select example" requird>
+            <select class="form-select" aria-label="Default select example" v-model="form.dog_id" requird>
                 <option selected>-- Choose a dog --</option>
-                <option v-for="dog in dogs" :key="dog.dog_id" :valu>One</option>
+                <option v-for="dog in dogs" :key="dog.dog_id" :value="dog.">One</option>
                 <option value="2">Two</option>
                 <option value="3">Three</option>
             </select>
