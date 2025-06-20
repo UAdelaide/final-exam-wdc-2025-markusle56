@@ -64,8 +64,8 @@ router.get('/api/walkers/summary', async function(req, res) {
         ) AS completed_walks
       FROM WalkRatings ra
       JOIN Users u
-        ON ra.walker_id = d.dog_id
-      JOIN Users u
+        ON ra.walker_id = u.user_id
+      JOIN a
         ON d.owner_id = u.user_id`
     );
     return res.status(200).json(rows);
