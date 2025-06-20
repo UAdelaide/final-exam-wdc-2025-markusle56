@@ -5,7 +5,8 @@ createApp({
     return {
         isOpen: false,
         firstButton: true,
-        secondButton: false
+        secondButton: false,
+        imagePath: ''
     };
   },
   async mounted() {
