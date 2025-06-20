@@ -13,7 +13,7 @@
     <h1 class="mb-4 text-primary">{{ message }}</h1>
     <!-- <p class="lead">Connect with trusted walkers for your beloved dog!</p> -->
 
-    <form class="mb-3">
+    <form class="mb-3" @submit.prevent="login">
       <label class="form-label">Username</label>
       <br>
       <input type="text" class="form-control" v-model="username" required>
@@ -35,7 +35,9 @@
         };
       },
       methods: {
-        
+        login() {
+
+        }
       }
     }).mount('#app');
   </script>
