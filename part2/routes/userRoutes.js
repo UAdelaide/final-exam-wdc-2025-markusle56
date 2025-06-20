@@ -72,6 +72,7 @@ router.get('/logout', (req, res) => {
     return res.sendStatus(500);
   }
 
-  res.clearCookie('connect.sid', { path: '/' });
-})
+    res.clearCookie('connect.sid', { path: '/' });
+  })
+};
 module.exports = router;

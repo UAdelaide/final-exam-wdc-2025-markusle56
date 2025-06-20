@@ -154,6 +154,7 @@
             if (!res.ok) {
               throw new Error(data.error || 'Logout failed');
             }
+            sessionStorage.clear();
             window.location.href = '/';
           } catch(err) {
             console.error('Login error', err);
