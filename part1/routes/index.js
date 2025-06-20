@@ -51,7 +51,10 @@ router.get('/api/walkrequests/open', async function(req, res) {
 router.get('/api/walkers/summary', async function(req, res) {
   try {
     const [rows] = await db.query(
-      `SELECT u.username AS walker_username, COUNT(ra.walker_id), AVERGAE(rating),
+      `SELECT
+        u.username AS walker_username,
+        COUNT(ra.walker_id) AS total_ratings,
+        AVERGAE(rating) AS average,
       FROM WalkRequests r
       JOIN Dogs d
         ON r.dog_id = d.dog_id
