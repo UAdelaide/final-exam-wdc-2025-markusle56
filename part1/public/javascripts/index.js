@@ -3,7 +3,7 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
-        
+        isOpen: false
     };
   },
   async mounted() {
