@@ -6,6 +6,12 @@ var session = require('express-session');
 
 const app = express();
 
+
+// Middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, '/public')));
 app.use(session({
   secret: 'Exam',
   resave: false ,
@@ -15,13 +21,6 @@ app.use(session({
     maxAge: 1000 * 60 * 60 * 2
   }
 }));
-
-
-// Middleware
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, '/public')));
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
