@@ -42,6 +42,7 @@
       },
       methods: {
         async login() {
+          this.errorMessage = '';
           try {
             const res = await fetch('/api/users/login', {
               method: 'POST',
