@@ -45,7 +45,7 @@ let db;
       database: 'DogWalkService'
     });
 
-    // Create a table if it doesn't exist
+    // Add record to show up back-end implemetation
     await db.execute(`
       INSERT INTO Users (username, email, password_hash, role)
       VALUES
