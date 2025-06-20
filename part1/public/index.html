@@ -7,7 +7,7 @@
     <script src="javascripts/index.js" defer></script>
     <title>Dog Walk Service</title>
 </head>
-<body>
+<body id="app">
     <div class="overlay" v-if="!isOpen">
         <div v-if="firstButton">Click on red button to open</div>
         <button v-if="firstButton" type="button" class="button" @click="open2rdButton">Open</button>
