@@ -12,7 +12,7 @@ createApp({
   async mounted() {
     try {
         const res = await fetch('https://dog.ceo/api/breeds/image/random');
-        this.imagePath =
+        const dogFile = res.json();
     } catch (err) {
 
     }
