@@ -49,12 +49,12 @@
             })
             .then((res) => {
               if (!response.ok) {
-                res.json.then((msg) => {
+                return res.json.then((msg) => {
                   throw new Error(msg.error);
                 })
               }
-              
             })
+            .then(())
           }
         }
       }
