@@ -59,6 +59,23 @@ router.post('/:id/apply', async (req, res) => {
   }
 });
 
-
+// GET user's dogs data
+router.get('/dogs', async (req, res) => {
+  try {
+  if (!req.session.user) {
+  throw new Error();
+  }
+  const [rows] = await db.query(
+  `SELECT dog_id, name
+  FROM Dogs
+  WHERE owner_id = ?`,
+  [req.session.user.id]
+  );
+  return res.status(200).json(rows);
+  } catch (err) {
+  console.error('SQL Error:', err);
+  res.status(500).json({ error: 'Failed to get dog data' });
+  }
+});
 
 module.exports = router;
