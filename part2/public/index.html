@@ -42,8 +42,12 @@
       },
       async mounted() {
         const response = await fetch('/api/users/me');
-        if (data) {
-
+        if (data.username) {
+          if (data.user.role === 'owner') {
+              window.location.href = '/owner-dashboard.html';
+          } else if (data.user.role === 'walker') {
+            window.location.href = '/walker-dashboard.html';
+          }
         }
         this.user = data;
       },
