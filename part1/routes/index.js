@@ -21,6 +21,7 @@ router.get('/api/dogs', async function(req, res) {
     return res.status(200).json(rows);
   } catch(err) {
     console.error("Error geting dogs data");
+    return res.sendStatus(500);
   }
-})
+});
 module.exports = router;
