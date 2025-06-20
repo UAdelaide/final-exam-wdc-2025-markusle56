@@ -136,7 +136,7 @@
           user: null,
         }
       },
-      mounted() {
+      async mounted() {
         const response = await fetch('/api/users/me');
         const data = await response.json();
         if (data.error) {
@@ -147,7 +147,7 @@
         this.user = data;
       },
       methods: {
-        logout() {
+        async logout() {
           try {
             const res = await fetch('/api/users/logout');
             const data = await res.json()
