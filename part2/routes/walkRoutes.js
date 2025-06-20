@@ -65,8 +65,9 @@ router.get('/dogs', async (req, res) => {
       `SELECT dog_id, name
       FROM Dogs
       WHERE owner_id = ?`,
-      [user]
-    )
+      [req.session.user.id]
+    );
+    
   }
 })
 module.exports = router;
