@@ -25,8 +25,8 @@
           <div class="mb-3">
             <label class="form-label">Dog ID</label>
             <select class="form-select" aria-label="Default select example" requird>
-                <option selected>-- Choose your dog --</option>
-                <option value="1">One</option>
+                <option selected>-- Choose a dog --</option>
+                <option v-for="dog in dogs" :key>One</option>
                 <option value="2">Two</option>
                 <option value="3">Three</option>
             </select>
