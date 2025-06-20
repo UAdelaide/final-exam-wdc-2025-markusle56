@@ -25,10 +25,9 @@
           <div class="mb-3">
             <label class="form-label">Dog ID</label>
             <select class="form-select" aria-label="Default select example" v-model="form.dog_id" required>
-                <option selected>-- Choose a dog --</option>
+                <option disabled>-- Choose a dog --</option>
                 <option v-for="dog in dogs" :key="dog.dog_id" :value="dog.dog_id">{{dog.name}}</option>
             </select>
-            <!-- <input v-model="form.dog_id" type="number" class="form-control" required> -->
           </div>
           <div class="mb-3">
             <label class="form-label">Requested Date & Time</label>
