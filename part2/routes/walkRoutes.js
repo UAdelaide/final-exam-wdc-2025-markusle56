@@ -59,4 +59,5 @@ router.post('/:id/apply', async (req, res) => {
   }
 });
 
+router.get('')
 module.exports = router;
