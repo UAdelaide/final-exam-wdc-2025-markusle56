@@ -50,9 +50,10 @@
             .then((res) => {
               if (!response.ok) {
                 res.json.then((msg) => {
-                  
+                  throw new Error(msg.error);
                 })
               }
+              
             })
           }
         }
