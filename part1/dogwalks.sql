@@ -66,4 +66,5 @@ VALUES
 
 INSERT INTO Dogs (owner_id, name, size)
 VALUES
-(SElECT user_id FROM Users WHERE email = 'alice@example.com', 'Max', 'me')
+((SElECT user_id FROM Users WHERE email = 'alice@example.com' LIMIT 1), 'Max', 'medium'),
+()
