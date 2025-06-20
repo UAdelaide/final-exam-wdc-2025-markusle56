@@ -63,7 +63,7 @@ router.post('/:id/apply', async (req, res) => {
 router.get('/dogs', async (req, res) => {
   try {
     if (!req.session.user) {
-
+      throw new Error()
     }
     const [rows] = await db.query(
       `SELECT dog_id, name
