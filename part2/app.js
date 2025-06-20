@@ -30,7 +30,22 @@ const userRoutes = require('./routes/userRoutes');
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
-3
+app.get('/api/dogs', async function(req, res) {
+  try {
+    const [rows] = await db.query(
+      `SELECT
+        dog_id,
+        name AS dog_name,
+        size,
+        owner_id
+      FROM Dogs`
+    );
+    return res.status(200).json(rows);
+  } catch(err) {
+    console.error("Error getting dogs data");
+    return res.sendStatus(500);
+  }
+});
 
 // Export the app instead of listening here
 module.exports = app;
