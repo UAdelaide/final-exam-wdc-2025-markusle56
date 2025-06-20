@@ -66,7 +66,7 @@ router.get('/api/walkers/summary', async function(req, res) {
       JOIN Users u
         ON ra.walker_id = u.user_id
       GROUP BY (ra.walker_id)
-      WHERE u.role = 'walker`
+      WHERE u.role = 'walker'`
     );
     return res.status(200).json(rows);
   } catch(err) {
