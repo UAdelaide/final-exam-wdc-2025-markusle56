@@ -139,9 +139,10 @@
       methods: {
         logout() {
           try {
-            const res = fetch('/api/users/logout', {
-              
-            })
+            const res = fetch('/api/users/logout');
+            if (!res.ok) {
+              this.
+            }
           }
         }
       }
