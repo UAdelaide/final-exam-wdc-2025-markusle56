@@ -77,5 +77,5 @@ VALUES
 ((SELECT dog_id FROM Dogs WHERE name = 'Max' LIMIT 1), '2025-06-10 08:00:00', '30', 'Parklands', 'open'),
 ((SELECT dog_id FROM Dogs WHERE name = 'Max' LIMIT 1), '2025-06-10 08:00:00', '30', 'Parklands', 'accepted'),
 ((SELECT dog_id FROM Dogs WHERE name = 'Max' LIMIT 1), '2025-06-10 08:00:00', '30', 'Parklands', 'cancelled'),
-((SELECT dog_id FROM Dogs WHERE name = 'Max' LIMIT 1), '2025-06-10 08:00:00', '30', 'Parklands', 'open'),
+((SELECT dog_id FROM Dogs WHERE name = 'Max' LIMIT 1), '2025-06-10 08:00:00', '30', 'Renown Park', 'completed'),
 ((SELECT dog_id FROM Dogs WHERE name = 'Max' LIMIT 1), '2025-06-10 08:00:00', '30', 'Parklands', 'open'),
