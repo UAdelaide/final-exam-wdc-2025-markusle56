@@ -67,12 +67,11 @@ router.post('/login', async (req, res) => {
 //GET log out
 router.get('/logout', (req, res) => {
   req.session.destroy((error) => {
-  if (error) {
-    console.error('Session destroy error:', error);
-    return res.sendStatus(500);
-  }
-
+    if (error) {
+      console.error('Session destroy error:', error);
+      return res.sendStatus(500);
+    }
     res.clearCookie('connect.sid', { path: '/' });
-  });
+    });
 });
 module.exports = router;
