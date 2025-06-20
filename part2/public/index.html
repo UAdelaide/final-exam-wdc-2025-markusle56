@@ -52,6 +52,7 @@
                 password: this.password
               })
             })
+            
             .then((res) => {
               if (!res.ok) {
                 return res.json.then((msg) => {
