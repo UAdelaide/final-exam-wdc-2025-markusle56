@@ -144,7 +144,9 @@
           window.location.href = '/';
           return;
         }
-        if (use)
+        if (data.role === 'walker') {
+          window.location.href = '/walekr'
+        }
         this.user = data;
       },
       methods: {
