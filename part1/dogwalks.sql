@@ -72,4 +72,4 @@ VALUES
 ((SElECT user_id FROM Users WHERE email = 'carol@example' LIMIT 1), 'PhuLoc', 'medium'),
 ((SElECT user_id FROM Users WHERE email = 'alice@example.com' LIMIT 1), 'LuongPhuoc', 'small');
 
-INSERT INTO WalkRequests (dog_id, re)
+INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
