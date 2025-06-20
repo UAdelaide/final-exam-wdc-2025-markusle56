@@ -55,7 +55,7 @@
             .then((res) => {
               if (!res.ok) {
                 return res.json.then((msg) => {
-                  throw new Error(msg.error);
+                  throw new Error(msg.error );
                 })
               }
               return res.json();
