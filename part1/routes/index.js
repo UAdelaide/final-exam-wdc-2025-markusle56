@@ -63,7 +63,7 @@ router.get('/api/walkers/summary', async function(req, res) {
           WHERE a.walker_id = u.user_id
             AND a.status = 'completed'
         ) AS completed_walks
-      FROM WalkRatings ra
+      FROM Users u
       JOIN Users u
         ON ra.walker_id = u.user_id
       WHERE u.role = 'walker'
@@ -76,30 +76,30 @@ router.get('/api/walkers/summary', async function(req, res) {
   }
 });
 
-router.get('/api/walkers/summary', async function(req, res) {
-  try {
-    const [rows] = await db.query(
-      `SELECT
-        u.username AS walker_username,
-        COUNT(ra.walker_id) AS total_ratings,
-        AVG(ra.rating) AS average_rating,
-        (
-          SELECT
-          COUNT(a.walker_id)
-          FROM WalkApplications a
-          WHERE a.walker_id = u.user_id
-            AND a.status = 'completed'
-        ) AS completed_walks
-      FROM WalkRatings ra
-      JOIN Users u
-        ON ra.walker_id = u.user_id
-      WHERE u.role = 'walker'
-      GROUP BY ra.walker_id, u.username`
-    );
-    return res.status(200).json(rows);
-  } catch(err) {
-    console.error("Error getting walkers data");
-    return res.sendStatus(500);
-  }
-});
+// router.get('/api/walkers/summary', async function(req, res) {
+//   try {
+//     const [rows] = await db.query(
+//       `SELECT
+//         u.username AS walker_username,
+//         COUNT(ra.walker_id) AS total_ratings,
+//         AVG(ra.rating) AS average_rating,
+//         (
+//           SELECT
+//           COUNT(a.walker_id)
+//           FROM WalkApplications a
+//           WHERE a.walker_id = u.user_id
+//             AND a.status = 'completed'
+//         ) AS completed_walks
+//       FROM WalkRatings ra
+//       JOIN Users u
+//         ON ra.walker_id = u.user_id
+//       WHERE u.role = 'walker'
+//       GROUP BY ra.walker_id, u.username`
+//     );
+//     return res.status(200).json(rows);
+//   } catch(err) {
+//     console.error("Error getting walkers data");
+//     return res.sendStatus(500);
+//   }
+// });
 module.exports = router;
