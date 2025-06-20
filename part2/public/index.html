@@ -58,14 +58,12 @@
             if (!res.ok) {
               throw new Error(msg.error || 'Login failed');
             }
-            
-            .then((data) => {
-              if (data.role === 'owner') {
-                window.location.href = '/owner-dashboard.html';
-              } else if (data.role === 'walker') {
-                window.location.href = 'walker-dashboard.html';
-              }
-            })
+
+            if (data.role === 'owner') {
+              window.location.href = '/owner-dashboard.html';
+            } else if (data.role === 'walker') {
+              window.location.href = 'walker-dashboard.html';
+            }
           } catch(err) {
             this.errorMessage = err.message;
             console.error('Login error', err);
