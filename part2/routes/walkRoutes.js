@@ -68,6 +68,9 @@ router.get('/dogs', async (req, res) => {
       [req.session.user.id]
     );
     
+  } catch (err) {
+    console.error('SQL Error:', error);
+    res.status(500).json({ error: 'Failed to get dog data' });
   }
 })
 module.exports = router;
