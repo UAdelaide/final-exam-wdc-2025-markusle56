@@ -39,7 +39,8 @@ router.get('/api/walkrequests/open', async function(req, res) {
       JOIN Dogs d
         ON r.dog_id = d.dog_id
       JOIN Users u
-        ON d.owner_id = u.user_id`
+        ON d.owner_id = u.user_id
+      WHERE r.status = 'open'`
     );
     return res.status(200).json(rows);
   } catch(err) {
