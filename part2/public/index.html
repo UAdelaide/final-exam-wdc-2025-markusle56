@@ -42,6 +42,7 @@
       },
       async mounted() {
         const response = await fetch('/api/users/me');
+        const data = await response.json();
         if (data.username) {
           if (data.role === 'owner') {
               window.location.href = '/owner-dashboard.html';
