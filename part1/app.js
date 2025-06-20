@@ -53,11 +53,13 @@ let db;
     `);
 
     await db.execute(`
-      CREATE TABLE IF NOT EXISTS books (
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        title VARCHAR(255),
-        author VARCHAR(255)
-      )
+      INSERT INTO Dogs (owner_id, name, size)
+      VALUES
+      ((SElECT user_id FROM Users WHERE email = 'alice@example.com' LIMIT 1),'Max', 'medium'),
+      ((SElECT user_id FROM Users WHERE email = 'carol@example.com' LIMIT 1), 'Bella', 'small'),
+      ((SElECT user_id FROM Users WHERE email = 'alice@example.com' LIMIT 1), 'Den', 'large'),
+      ((SElECT user_id FROM Users WHERE email = 'carol@example.com' LIMIT 1), 'PhuLoc', 'medium'),
+      ((SElECT user_id FROM Users WHERE email = 'alice@example.com' LIMIT 1), 'LuongPhuoc', 'small');
     `);
 
     await db.execute(`
