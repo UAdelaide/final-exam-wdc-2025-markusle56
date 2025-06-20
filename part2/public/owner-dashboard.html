@@ -139,11 +139,11 @@
       mounted() {
         const res = fetch('/api/users/me');
         const data = res.json();
-        if (data.error) {
+        if (data.dat) {
           console.error(data.error);
           window.location.href = '/';
-          
         }
+
       },
       methods: {
         logout() {
