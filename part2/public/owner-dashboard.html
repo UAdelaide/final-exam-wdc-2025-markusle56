@@ -142,9 +142,9 @@
         if (data.error) {
           console.error(data.error);
           window.location.href = '/';
-          return
+          return;
         }
-
+        this.user = data;
       },
       methods: {
         logout() {
