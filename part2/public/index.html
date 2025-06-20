@@ -74,7 +74,10 @@
 
         const res = await fetch('/api/dogs');
         const dogs = await res.json();
-        if (dogs.)
+        if (!dogs) {
+          return;
+        }
+        for 
       },
       methods: {
         async login() {
