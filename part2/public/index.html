@@ -77,8 +77,10 @@
         if (!dogs) {
           return;
         }
-        const num = dogs.length;
-        const imageFile = await fetch('')
+        dogs.foreach(dog) => {
+          const imageFile = await fetch('https://dog.ceo/api/breeds/image/random');
+          const imageFile 
+        }
       },
       methods: {
         async login() {
