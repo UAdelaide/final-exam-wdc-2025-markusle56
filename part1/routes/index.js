@@ -59,7 +59,8 @@ router.get('/api/walkers/summary', async function(req, res) {
         (
           SELECT
           COUNT(*)
-          FROM WalkRequests re
+          FROM WalkApplications a
+          JOIN WalkRequests re
           WHERE ra.request_id = re.request_id
             AND re.status = 'completed'
         ) AS completed_walks
