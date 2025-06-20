@@ -42,9 +42,9 @@
         };
       },
       methods: {
-        login() {
+        async login() {
           try {
-            const res = fetch('/api/users/login', {
+            const res = await fetch('/api/users/login', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({
@@ -54,6 +54,8 @@
             });
 
             const data = await res.json
+
+            
             .then((res) => {
               if (!res.ok) {
                 return res.json.then((msg) => {
