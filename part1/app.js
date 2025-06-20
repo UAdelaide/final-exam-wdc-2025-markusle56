@@ -86,7 +86,7 @@ let db;
       VALUES
         (1, 2, 'completed'),
         (4, 2, 'completed'),
-        (3, 5, 'completed')
+        (3, 3, 'completed')
     `);
 
     await db.execute(`
