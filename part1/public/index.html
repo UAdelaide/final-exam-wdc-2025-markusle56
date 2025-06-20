@@ -13,6 +13,9 @@
         <br>
         <h1>45</h1>
         <div v-if="secondButton">Click on button below again to open</div>
+        <form @submit.prevent="openPage">
+            <input
+        </form>
         <button v-if="secondButton" type="button" @click="openPage">Open again</button>
     </div>
     <div v-if="isOpen">
