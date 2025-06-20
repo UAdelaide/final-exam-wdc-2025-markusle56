@@ -17,8 +17,11 @@ createApp({
   },
   methods: {
     open2rdButton() {
-        this.firstButton = false,
-        this.secondButton = true
+        this.firstButton = false;
+        this.secondButton = true;
+    },
+    openPage() {
+        this.secondButton
     }
   }
 })
