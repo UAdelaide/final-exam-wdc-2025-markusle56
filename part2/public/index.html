@@ -54,14 +54,14 @@
             });
 
             const data = await res.json
-            
+
             if (!res.ok) {
               throw new Error(data.error || 'Login failed');
             }
 
-            if (data.role === 'owner') {
+            if (data.user.role === 'owner') {
               window.location.href = '/owner-dashboard.html';
-            } else if (data.role === 'walker') {
+            } else if (data.user.role === 'walker') {
               window.location.href = 'walker-dashboard.html';
             }
           } catch(err) {
