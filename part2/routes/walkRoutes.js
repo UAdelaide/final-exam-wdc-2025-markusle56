@@ -59,7 +59,7 @@ router.post('/:id/apply', async (req, res) => {
   }
 });
 
-// fetch 
+// GET user's dogs data
 router.get('/dogs', async (req, res) => {
   try {
     if (!req.session.user) {
@@ -76,5 +76,6 @@ router.get('/dogs', async (req, res) => {
     console.error('SQL Error:', err);
     res.status(500).json({ error: 'Failed to get dog data' });
   }
-})
+});
+
 module.exports = router;
