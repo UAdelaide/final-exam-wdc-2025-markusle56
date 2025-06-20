@@ -32,7 +32,8 @@ router.get('/api/walkrequests/open', async function(req, res) {
         r.request_id,
         d.name AS dog_name,
         r.requested_time,
-        r.duration_minutes
+        r.duration_minutes,
+        r.location,
         u.username AS owner_username
       FROM Dogs d
       JOIN Users u
