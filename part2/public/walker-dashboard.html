@@ -112,6 +112,16 @@
           user: null,
         }
       },
+      async mounted() {
+        const response = await fetch('/api/users/me');
+        const data = await response.json();
+        if (data.error) {
+          console.error(data.error || data.role != 'owner');
+          window.location.href = '/';
+          return;
+        }
+        this.user = data.user;
+      },
       methods: {
         async logout() {
           try {
