@@ -9,9 +9,9 @@
 <body id="app">
     <div v-if="!isOpen">
         <br>
-        <div>
-            <div v-if="firstButton">Click on button below to open</div>
-            <button v-if="firstButton" type="button"@click="open2rdButton">Open</button>
+        <div v-if="firstButton">
+            <div >Click on button below to open</div>
+            <button type="button" @click="open2rdButton">Open</button>
             <br>
             <h1>45</h1>
         </div>
