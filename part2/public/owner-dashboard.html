@@ -147,10 +147,9 @@
         }
         this.user = data;
 
-        const res = await fetch('/api/walks/dogs');
-        const dog_data = await res.json();
+        const res = await fetch('/api/walks/dogs')
         if (res.ok) {
-          this.dogs = 
+          this.dogs = dog_data;
         }
       },
       methods: {
