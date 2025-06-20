@@ -13,7 +13,9 @@ createApp({
     try {
         const res = await fetch('https://dog.ceo/api/breeds/image/random');
         const dogFile = await res.json();
-        if (dogFil)
+        if (dogFile.status === "success") {
+            this.
+        }
     } catch (err) {
 
     }
