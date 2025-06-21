@@ -62,7 +62,7 @@ router.post('/:id/apply', async (req, res) => {
 // GET user's dogs data
 router.get('/dogs', async (req, res) => {
   try {
-
+    // Prevent unathorised user
     if (req.session.user.role !== 'owner') {
       throw new Error();
     }
