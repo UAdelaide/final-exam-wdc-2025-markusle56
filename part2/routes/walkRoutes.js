@@ -73,7 +73,7 @@ router.get('/dogs', async (req, res) => {
   );
   return res.status(200).json(rows);
   } catch (err) {
-    console.error('SQL Error:', err);
+    console.error('Error:', err);
     res.status(500).json({ error: 'Failed to get dog data' });
   }
 });
