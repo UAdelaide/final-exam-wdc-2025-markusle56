@@ -79,6 +79,7 @@
 
         if (!dogs) return;
 
+        // Fetch one path at a time because limit of api is 50 image, if we have more than 50 dogs we cannot fetch all of them at a time
         for (const dog of dogs) {
           const imageRes = await fetch('https://dog.ceo/api/breeds/image/random');
           const imageData = await imageRes.json();
